@@ -98,6 +98,8 @@ btnHold.addEventListener("click", function () {
   }
 });
 
+btnNew.addEventListener("click", init);
+
 // btnNew.addEventListener("click", function () {
 //   playing = true;
 //   diceEl.classList.add("hidden");
@@ -120,5 +122,3 @@ btnHold.addEventListener("click", function () {
 //   document.getElementById(`score--1`).textContent = 0;
 //   document.getElementById(`current--1`).textContent = 0;
 // });
-
-btnNew.addEventListener("click", init);
