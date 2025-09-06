@@ -61,7 +61,7 @@ btnHold.addEventListener("click", function () {
       scores[activePlayer];
 
     // 2. Check if player's score is >= 100
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 1) {
       // Finish the game
       playing = false;
       diceEl.classList.add("hidden");
@@ -77,4 +77,46 @@ btnHold.addEventListener("click", function () {
       switchPlayer();
     }
   }
+});
+
+// btnNew.addEventListener("click", function () {
+//   playing = true;
+//   diceEl.classList.add("hidden");
+//   scores[activePlayer] = 0;
+//   currentScore = 0;
+
+//   document
+//     .querySelector(`.player--${activePlayer}`)
+//     .classList.remove("player--winner");
+
+//   activePlayer = 0;
+//   document
+//     .querySelector(`.player--${activePlayer}`)
+//     .classList.add("player--active");
+
+//   document.getElementById(`score--${activePlayer}`).textContent = 0;
+//   document.getElementById(`current--${activePlayer}`).textContent = 0;
+
+//   document.querySelector(`.player--1`).classList.remove("player--active");
+//   document.getElementById(`score--1`).textContent = 0;
+//   document.getElementById(`current--1`).textContent = 0;
+// });
+
+btnNew.addEventListener("click", function () {
+  playing = true;
+  diceEl.classList.add("hidden");
+  scores[0] = 0;
+  scores[1] = 0;
+  currentScore = 0;
+
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+
+  player0El.classList.remove("player--winner", "player--active");
+  player1El.classList.remove("player--winner", "player--active");
+
+  activePlayer = 0;
+  player0El.classList.add("player--active");
 });
